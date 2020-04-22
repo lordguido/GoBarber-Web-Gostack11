@@ -1,22 +1,18 @@
 import React from 'react';
 
-import { Contanier } from './styles';
+import { Container } from './styles';
 
-interface TooltipsProps {
+interface TooltipProps {
   title: string;
   className?: string;
 }
 
-const Tooltip: React.FC<TooltipsProps> = ({
-  title,
-  className = '',
-  children,
-}) => {
+const Tooltip: React.FC<TooltipProps> = ({ title, className, children }) => {
   return (
-    <Contanier className={className}>
+    <Container className={className}>
       {children}
       <span>{title}</span>
-    </Contanier>
+    </Container>
   );
 };
 
